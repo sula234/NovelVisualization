@@ -1,2 +1,2 @@
 # NovelVisualization
-Automatic visualization of novels using AI models
+**Automatic visualization of novels using AI models**
