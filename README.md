@@ -15,7 +15,7 @@
 looking to the side of the road from which the sound came, he saw a
 small pig stuck between two boards in the fence.*
 
-Также стоит отметить, что данный подход очень хорошо иллюстрирует абзацы с описанием героев. Далее приведены иллюстрации для романа Портрет Дориан Грей. Хорошие результаты связаны с тем, что по данному роману снимали фильм, и многие герои очень похожи на полученные изображения.
+Также стоит отметить, что данный подход очень хорошо иллюстрирует абзацы с описанием героев. Далее приведены иллюстрации для романа Портрет Дориан Грей. Однако хорошие результаты могут быть связаны с тем, что по данному роману снимали фильм, и многие герои очень похожи на полученные изображения.
 ![image3](https://user-images.githubusercontent.com/91324982/222165646-321f66fa-85b8-4f64-aef1-572a1c1f4d17.jpg)
 *“Harry,” said Basil Hallward, looking him straight in the face, “every
 portrait that is painted with feeling is a portrait of the artist, not
