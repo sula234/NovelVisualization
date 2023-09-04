@@ -5,21 +5,21 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-В данной работе были продемонстрированы возможности моделей глубокого обучения **Stable Diffusion**  и **Meaning Cloud** на примере задачи автоматической генерации изображений на базе знаменитых художественных произведений. Как показали результаты, модель для генерации изображений требует очень четкого описания и даже так не всегда выдает осмысленные результаты. Более того, проблема ухудшается неуклюжим сокращением текста и другими ограничениями моделей, использованных в данной работе. Однако были получены и достойные результаты, которые будут продемонстрированы ниже.
+In this work, the capabilities of the **Stable Diffusion** and **Meaning Cloud** deep learning models were demonstrated using the example of the task of automatically generating images based on famous novels. As the results showed, the model for generating images requires a very clear description and even so, does not always produce meaningful results. Moreover, the problem is exacerbated by not clear text reduction and other limitations of the models used in this paper. However, decent results were also obtained, which will be demonstrated below.
 
-Модель Stable Diffusion была использована для генерации изображений на базе текстовых описаний. Meaning Cloud анализировала текст и сокращала его, передавая основной смысл. Чтобы упростить работу с текстом, было решено анализировать по 1-2 абзаца. Данный подход очень простой, и реализация не требует много времени. Однако может страдать качество полученных изображений. Текст должен быть максимально точным и подробным, иначе мы получаем искаженные изображения. Для иллюстрации были выбраны первые несколько глав знаменитой сказки Кот в сапогах. Ниже приведен сокращенный текст и полученное изображение. Как видим, чтобы не повторять имена собственные, автор использует местоимения. Однако при обработке модель не понимает, о ком идет речь, и начинает использовать то, что есть. Поэтому вместо ликующего Кота в сапогах мы получаем крысу.
+The Stable Diffusion model was used to generate images based on text descriptions. Meaning Cloud analyzed the text and shortened it, conveying the main meaning. To simplify the work with the text, it was decided to analyze 1-2 paragraphs. This approach is very simple, and the implementation does not require much time. However, the quality of the resulting images may suffer. The text should be as accurate and detailed as possible, otherwise, we get distorted images. For illustration, the first few chapters of the famous fairy tale Puss in Boots were chosen. Below is the abbreviated text and the resulting image. As you can see, in order not to repeat proper names, the author uses pronouns. However, during processing, the model does not understand who it is about and starts to confuse the characters. Therefore, instead of a jubilant Puss in Boots, we get a rat.
 
 ![image4](https://user-images.githubusercontent.com/91324982/222164456-161f3a9c-58dd-4182-8756-988536ddd776.jpg)
-*"Hurray!" he cried, as he reached the front door, and he took a hop,skip, and jump across the piazza, holding his tail gracefully in his left paw. "Hurray!"Down the steps he skipped, two at a time, down the walk to the gate, his heels clattering on the stone pavement, rat-a-tat-tat, like a cavalryman. The road was dusty, but he went along gaily, the sun shining on the bright-red tops of his boots, making him very proud indeed.'*
+*"Hurray!" he cried, as he reached the front door, and he took a hop, skip, and jump across the piazza, holding his tail gracefully in his left paw. "Hurray!"Down the steps he skipped, two at a time, down the walk to the gate, his heels clattering on the stone pavement, rat-a-tat-tat, like a cavalryman. The road was dusty, but he went along gaily, the sun shining on the bright red tops of his boots, making him very proud indeed.'*
 
-Многие другие абзацы без контекста получаются бессмысленными для Stable Diffusion или в целом слишком сложными, чтобы дать правильное изображение. Однако некоторые все таки получаются удачными. В той же самой cказке о  Коте в сапогах есть сцена, где он находит застрявшую свинку в заборе.
+Many other paragraphs without context are rendered meaningless to Stable Diffusion, or generally too complex to portray properly. However, some are still successful. In the same story about Puss in Boots, there is a scene where he finds a pig stuck in a fence.
 
 ![image2](https://user-images.githubusercontent.com/91324982/222165057-208ad844-e0ff-46d1-89b3-1abe9fec525f.jpg)
 *He hadn't gone very far when he heard a funny little squeak, and,
 looking to the side of the road from which the sound came, he saw a
 small pig stuck between two boards in the fence.*
 
-Также стоит отметить, что данный подход очень хорошо иллюстрирует абзацы с описанием героев. Далее приведены иллюстрации для романа Портрет Дориан Грей. Однако хорошие результаты могут быть связаны с тем, что по данному роману снимали фильм, и многие герои очень похожи на полученные изображения.
+It is also worth noting that this approach illustrates paragraphs with descriptions of heroes very well. The following are illustrations for The Picture of Dorian Gray. However, the good results may be due to the fact that films were made using the novel, and many of the movie characters are very similar to the resulting images.
 ![image3](https://user-images.githubusercontent.com/91324982/222165646-321f66fa-85b8-4f64-aef1-572a1c1f4d17.jpg)
 *“Harry,” said Basil Hallward, looking him straight in the face, “every
 portrait that is painted with feeling is a portrait of the artist, not
@@ -48,9 +48,9 @@ some day be to me. It is not merely that I paint from him, draw from
 him, sketch from him. Of course, I have done all that. But he is much
 more to me than a model or a …*
 
-В заключении хотелось бы отметить, что на 10 неудачных изображений приходится по одной достойной. Чтобы улучшить данный результат, следует применять более улучшенные алгоритмы для сокращения абазцев и модели для генерации. Например, можно анализировать предыдущие абзацы и находить, о ком говорится в данном абзаце, если герой указан местоимением. Однако если учитывать, что в книгах не так уж и много обычно изображений(около 10 на книгу), то результаты могут считаться удовлетворительными.
+In conclusion, I would like to note that for 10 unsuccessful images, there is one worthy one. To improve this result, more advanced algorithms for paragraph reduction and models for generation should be applied. For example, you can analyze the previous paragraphs and find who is being referred to in this paragraph if the hero is indicated by a pronoun. However, if we take into account that there are usually not so many images in books (about 10 per book), then the results can be considered satisfactory.
 
-*Код для данной работы представлен в соответствующем Google Colab блокноте.* 
+*The code for this work is provided in the corresponding Google Colab notebook.*
 
 
 
